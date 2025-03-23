@@ -1,0 +1,13 @@
+Prerequisites
+AlmaLinux8
+Ipv6 /64
+Install script using 3proxy
+After logging in to VPS, you just need to copy and paste the following commands in turn:
+With AlmaLinux8 operating system (recommended)
+
+yum update -y
+yum -y install curl wget nano make
+Then please download the script and run it with bash
+wget https://raw.githubusercontent.com/lexuanduongmmo/proxy/main/scripts/1000.sh
+chmod +x /root/1000.sh
+bash /root/1000.sh
