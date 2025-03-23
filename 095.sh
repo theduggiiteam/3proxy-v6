@@ -25,7 +25,7 @@ install_3proxy() {
     mkdir -p /usr/local/etc/3proxy/{bin,logs,stat}
     mv /3proxy/3proxy-0.9.5/bin/3proxy /usr/local/etc/3proxy/bin/
     
-    wget https://raw.githubusercontent.com/theduggiiteam/3proxy-v6/main/3proxy.service-Centos8 -O /3proxy/3proxy-0.9.5/scripts/3proxy.service
+    wget https://raw.githubusercontent.com/theduggiiteam/3proxy-v6/refs/heads/main/3proxy.service-Centos9 -O /3proxy/3proxy-0.9.5/scripts/3proxy.service
     cp /3proxy/3proxy-0.9.5/scripts/3proxy.service /usr/lib/systemd/system/3proxy.service
     systemctl daemon-reload
     systemctl enable 3proxy
