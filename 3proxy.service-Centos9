@@ -1,0 +1,20 @@
+[Unit]
+Description=3proxy tiny proxy server
+Documentation=man:3proxy(1)
+After=network.target nss-lookup.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/etc/3proxy/bin/3proxy /usr/local/etc/3proxy/3proxy.cfg
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5s
+LimitNOFILE=999999
+LimitNPROC=999999
+TasksMax=infinity
+OOMScoreAdjust=-1000
+
+[Install]
+WantedBy=multi-user.target
+Alias=3proxy.service
